@@ -1,5 +1,5 @@
 <template>
-    <div class="contant">
-        <h1>Contact</h1>
-    </div>
+   <b-container>
+        <strong>Contact</strong>
+   </b-container>
 </template>
