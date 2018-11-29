@@ -9,7 +9,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    value: 0
+    value: ""
   },
   getters,
   mutations,

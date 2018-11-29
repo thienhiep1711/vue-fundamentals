@@ -1,16 +1,12 @@
 <template>
   <b-container>
-    <app-slider />
     <counter-result />
     <counter-button />
+    <br>
     <another-result />
     <another-couter />
-    <b-form-input
-      v-model="value"
-      type="text"
-      placeholder="Enter your numbers">
-    </b-form-input>
-    <p>Value: {{ value }}</p>
+    <br>
+    <input-form />
   </b-container>
 </template>
 <script>
@@ -22,27 +18,19 @@ import Counter from '../components/counter/Counter';
 import Result from '../components/counter/Result';
 import AnotherResult from '../components/counter/AnotherResult';
 import AnotherCounter from '../components/counter/AnotherCounter';
+import InputForm from '../components/inputForm/InputForm';
 
 
 export default {
   name: "home",
-  computed: {
-    value: {
-      get() {
-        return this.$store.getters[types.VALUE];
-      },
-      set(value) {
-        this.$store.dispatch(types.UPDATE_VALUE, value);
-      }
-    }
-  },
   components: {
     Dashboard,
     appSlider: Slider,
     counterResult: Result,
     counterButton: Counter,
     anotherResult: AnotherResult,
-    anotherCouter: AnotherCounter
+    anotherCouter: AnotherCounter,
+    inputForm: InputForm,
   }
 };
 </script>

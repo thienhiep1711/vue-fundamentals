@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Result: {{counter}} </h2>
+    <h3>Result: {{counter}} </h3>
   </div>
 </template>
 

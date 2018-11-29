@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bt-group">
     <b-button variant="danger" @click="decrement(100)">
       Decement -
     </b-button>
@@ -8,6 +8,14 @@
     </b-button>
   </div>
 </template>
+
+<style lang="scss">
+.bt-group {
+  button {
+    margin-right: 10px;
+  }
+}
+</style>
 
 <script>
 import {mapActions} from 'vuex';

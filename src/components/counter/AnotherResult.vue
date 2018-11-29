@@ -1,9 +1,10 @@
 <template>
   <div>
     <h3>Result Another: {{doubleCounter}} </h3>
-    <h3>Numbers of clicks: {{stringCounter}} </h3>
+    <h2>Numbers of clicks: {{stringCounter}} </h2>
   </div>
 </template>
+
 
 <script>
 import { mapGetters } from "vuex";
