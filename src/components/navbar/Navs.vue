@@ -9,8 +9,9 @@
 
     <b-navbar-nav>
       <b-nav-item :to="{ path: '/' }">Home</b-nav-item>
-      <b-nav-item :to="{ path: 'about' }">About</b-nav-item>
-      <b-nav-item :to="{ path: 'contact' }">Contact</b-nav-item>
+      <b-nav-item :to="{ path: '/about' }">About</b-nav-item>
+      <b-nav-item :to="{ path: '/contact' }">Contact</b-nav-item>
+      <b-nav-item :to="{ path: '/user' }">User</b-nav-item>
     </b-navbar-nav>
 
     <!-- Right aligned nav items -->
