@@ -2,7 +2,11 @@
   <div id="app">
     <navs/>
     <div class="app__wrap">
-      <router-view/>
+      <b-container>
+        <transition name="slide" mode="in-out">
+           <router-view/>
+        </transition>
+      </b-container>
     </div>
   </div>
 </template>

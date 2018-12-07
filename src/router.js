@@ -1,15 +1,24 @@
 import Vue from "vue";
-import Router from "vue-router";
+import VueRouter from "vue-router";
 import Home from "./views/Home.vue";
 import User from "./views/User.vue";
 import UserStart from "./components/user/UserStart.vue";
 import UserEdit from "./components/user/UserEdit.vue";
 import UserDetail from "./components/user/UserDetail.vue";
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
+const router = new VueRouter({
   mode: "history",
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    if (to.hash) {
+      return { selecter: to.hash };
+    }
+    return { x: 0, y: 0 };
+  },
   routes: [
     {
       path: "",
@@ -35,6 +44,18 @@ export default new Router({
         { path: ":id", component: UserDetail },
         { path: ":id/edit", component: UserEdit }
       ]
+    },
+    {
+      path: "/redirect-me",
+      redirect: {
+        name: "home"
+      }
+    },
+    {
+      path: "*",
+      redirect: "/"
     }
   ]
 });
+
+export default router;
